@@ -79,9 +79,9 @@ class Field {
         
         let newField = []
 
-        function randomIndex() {
+        function randomIndex(limit = totalFieldElements) {
             /*haha taking advantages of hoising */
-            return Math.floor(Math.random() * totalFieldElements) + 1
+            return Math.floor(Math.random() * limit) + 1
         }
 
         /*it for iteration will be create the array (row) and the
@@ -139,7 +139,7 @@ class Field {
                 newField.push(redoRow)
             }
         
-        newField[1][2] = hat
+        newField[randomIndex(newField.length - 1)][randomIndex(newField[0].length - 1)] = hat
 
         return newField
     }
