@@ -43,7 +43,7 @@ class Field {
             prompt(this.status) 
         }
     }
-
+//pointer
     searchPoint (input) {
     this.getCoordanates(input)
 
@@ -110,7 +110,6 @@ class Field {
         while (randomHoleLocation.length < calculateHolesElements) {
     
             randomHoleLocation.push(randomIndex());
-          
         }
 
         console.log(randomHoleLocation.length)
